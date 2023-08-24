@@ -20,12 +20,11 @@ use App\Http\Controllers\PageController;
 
 
 
-Route::get('/about', [PageController::class, 'about']);
-
-Route::get('/contact', [PageController::class, 'contact']);
 
 Route::namespace('\App\Http\Controllers')->group(function(){
     Route::get( '/',  'PageController@index');
     Route::get( '/blog',  'PageController@blog');
+    Route::get( '/about',  'PageController@about');
+    Route::get( '/contact',  'PageController@contact');
 
 });
