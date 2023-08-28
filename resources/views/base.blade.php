@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Home - Append Bootstrap Temlate</title>
+  <title>@yield('title') - {{ config('app.name')}}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -46,19 +46,19 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Append</h1>
+        <h1>{{ config('app.name')}}</h1>
         <span>.</span>
       </a>
 
       <!-- Nav Menu -->
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html#hero" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li><a href="index.html#team">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="{{route('index') }}" class="active">Home</a></li>
+          <li><a href="{{route('about') }}">About</a></li>
+          <!<li><a href="{{route('services') }}">Services</a></li>
+          <li><a href="{{route('portfolio') }}">Portfolio</a></li>
+          <li><a href="{{route('team') }}">Team</a></li>
+          <li><a href="{{route('blog') }}">Blog</a></li>
           <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="dd-box-shadow">
               <li><a href="#">Dropdown 1</a></li>
