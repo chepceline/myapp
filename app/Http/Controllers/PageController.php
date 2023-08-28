@@ -15,12 +15,20 @@ class PageController extends Controller
     {
         return view('about');
     }
-    public function contact()
+    public function services()
     {
-        return view('contact');
+        return view('services');
     }
     public function blog()
     {
         return view('blog');
+    }
+    public function team()
+    {
+        return view('team');
+    }
+    public function portfolio()
+    {
+        return view('portfolio');
     }
 }
