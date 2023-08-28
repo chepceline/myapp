@@ -22,9 +22,12 @@ use App\Http\Controllers\PageController;
 
 
 Route::namespace('\App\Http\Controllers')->group(function(){
-    Route::get( '/',  'PageController@index');
-    Route::get( '/blog',  'PageController@blog');
-    Route::get( '/about',  'PageController@about');
-    Route::get( '/contact',  'PageController@contact');
+    Route::get( '/',  'PageController@index')->name('index');
+    Route::get( '/blog',  'PageController@blog')->name('blog');
+    Route::get( '/about',  'PageController@about')->name('about');
+    Route::get( '/services',  'PageController@services')->name('services');
+    Route::get( '/portfolio',  'PageController@portfolio')->name('portfolio');
+    Route::get( '/team',  'PageController@team')->name('team');
+
 
 });
