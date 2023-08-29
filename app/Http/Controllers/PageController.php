@@ -31,4 +31,8 @@ class PageController extends Controller
     {
         return view('portfolio');
     }
+    public function blog_details()
+    {
+        return view('blog_details');
+    }
 }
