@@ -1,5 +1,5 @@
 @extends('base')
-
+@section('title', 'Portfolio')
 
 @section('content')
   <main id="main">
