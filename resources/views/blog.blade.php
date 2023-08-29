@@ -1,5 +1,5 @@
 @extends('base')
-
+@section('title', 'Blog')
 @section('content')
 
 
@@ -45,7 +45,7 @@
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
+                <a href="{{route('blog_details') }}">Dolorum optio tempore voluptas dignissimos</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -71,7 +71,7 @@
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
+                <a href="{{route('blog_details') }}">Nisi magni odit consequatur autem nulla dolorem</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -97,7 +97,7 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
+                <a href="{{route('blog_details') }}">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -123,7 +123,7 @@
               <p class="post-category">Sports</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Non rem rerum nam cum quo minus olor distincti</a>
+                <a href="{{route('blog_details') }}">Non rem rerum nam cum quo minus olor distincti</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -149,7 +149,7 @@
               <p class="post-category">Politics</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
+                <a href="{{route('blog_details') }}">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
               </h2>
 
               <div class="d-flex align-items-center">
@@ -175,7 +175,7 @@
               <p class="post-category">Entertainment</p>
 
               <h2 class="title">
-                <a href="blog-details.html">Distinctio provident quibusdam numquam aperiam aut</a>
+                <a href="{{route('blog_details') }}">Distinctio provident quibusdam numquam aperiam aut</a>
               </h2>
 
               <div class="d-flex align-items-center">
