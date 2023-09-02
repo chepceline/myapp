@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'user_id',
         'category_id',
@@ -15,6 +16,13 @@ class Post extends Model
         'content',
         'status',
     ];
-    use HasFactory;
+   
+    public function category(){
+        return $this->belongsTo(Category::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 
 }
