@@ -18,8 +18,8 @@ return new class extends Migration
             $table->text('message');
             $table->timestamps();
             //Foreign Keys
-            $table->foreign('user_id')->on('users')->references('id');
-            $table->foreign('post_id')->on('posts')->references('id');
+            $table->foreign('user_id')->on('users')->references('id')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('post_id')->on('categories')->references('id')->cascadeOnDelete()->cascadeOnUpdate();
 
         });
     }
