@@ -29,6 +29,7 @@ Route::namespace('\App\Http\Controllers')->group(function(){
     Route::get( '/portfolio',  'PageController@portfolio')->name('portfolio');
     Route::get( '/team',  'PageController@team')->name('team');
     Route::get( '/blog_details',  'PageController@blog_details')->name('blog_details');
+    Route::get('/test', 'PageController@test')->name('test');
 
 
 });
