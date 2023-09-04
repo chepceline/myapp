@@ -35,4 +35,7 @@ class PageController extends Controller
     {
         return view('blog_details');
     }
+    public function test(){
+        return view('admin.pages.dashboard');
+    }
 }
