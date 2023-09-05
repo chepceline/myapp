@@ -4,8 +4,14 @@
 
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
+    @include('admin.layouts.navbar')
+    @include('admin.layouts.sidebar')
+    
+   
+   
        <!-- Main Content -->
        <div id="content">
+     
         <!-- Begin Page Content -->
                 <div class="container-fluid">
 
