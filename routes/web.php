@@ -33,3 +33,7 @@ Route::namespace('\App\Http\Controllers')->group(function(){
 
 
 });
+// Admin routes
+Route::namespace('App\Http\Controllers\Admin')->prefix('admin')->as('admin')->group(function(){
+    Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
+});
