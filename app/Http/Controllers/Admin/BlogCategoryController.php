@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\BlogCategory;
 use Illuminate\Http\Request;
+
 
 class BlogCategoryController extends Controller
 {
@@ -12,7 +14,10 @@ class BlogCategoryController extends Controller
      */
     public function index()
     {
-        return view ('admin.pages.blog_categories.index');
+        $data=[];
+        $data['categories'] =BlogCategory::all();
+
+        return view ('admin.pages.blog_categories.index', $data);
     }
 
     /**
@@ -20,7 +25,8 @@ class BlogCategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.blog_categories.create');
+        
+        return view('admin.pages.blog_categories.create',);
     }
 
     /**
@@ -28,7 +34,13 @@ class BlogCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $request->validate([
+            'name'=>'required|string',
+            'description'=>'required|string'
+        ]);
+        BlogCategory::query()->create($request->all());
+
+        return redirect()->route('admin.categories.list');
     }
 
     /**
