@@ -34,17 +34,17 @@ Route::namespace('\App\Http\Controllers')->group(function(){
 
 });
 // Admin routes
-Route::namespace('App\Http\Controllers\Admin')->prefix('admin')->as('admin')->group(function(){
+Route::namespace('App\Http\Controllers\Admin')->prefix('admin')->as('admin.')->group(function(){
     Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
     Route::get('/users','AdminController@users')->name('users');
-    Route::resource('/blog/category', 'BlogCategoryController')->names([
-        'index' => 'category.list',
-        'create' => 'category.create',
-        'store' => 'category.store',
-        'show' => 'category.show',
-        'edit' => 'category.edit',
-        'update' => 'category.update',
-        'destroy' => 'category.destroy'
+    Route::resource('/blog/categories', 'BlogCategoryController')->names([
+        'index' => 'categories.list',
+        'create' => 'categories.create',
+        'store' => 'categories.store',
+        'show' => 'categories.show',
+        'edit' => 'categories.edit',
+        'update' => 'categories.update',
+        'destroy' => 'categories.destroy'
 
     ]);
 });
