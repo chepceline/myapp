@@ -21,10 +21,26 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Add New Category</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Add New Blog Categories</h6>
                         </div>
                         <div class="card-body">
-                            <p>Note: Implement Create Form</p>
+                            <form action="{{ route('admin.categories.store')}}" method="post">
+                                @csrf
+                                <div class="mb-3">
+                                    <label class="form-label">Category Name:</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Enter category name">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control" name="description" placeholder="Enter description" rows="10"></textarea>
+                                </div>
+                                <button>Submit</button>
+
+                            </form>
+                            
+                           
+                            <button></button>
+                
                         </div>
                     </div>
 
