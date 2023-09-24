@@ -41,21 +41,18 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                                        @foreach($categories as $index=>$category)
                                         <tr>
-                                            <td>1</td>
-                                            <td>Category 1</td>
-                                            <td><a href="#">View</a></td>
+                                            <td>{{ $index + 1 }}</td>
+                                            <td>{{ $category->name }}</td>
+                                            <td>
+                                                <a href="{{ route ('admin.categories.show', $category->id)}}" class="btn btn-primary  mx-5">Show</a>
+                                                <a href="{{ route ('admin.categories.edit',$category->id)}}" class="btn btn-secondary">Edit</a>
+
+                                            </td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Category 2</td>
-                                            <td><a href="#">View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Category 3</td>
-                                            <td><a href="#">View</a></td>
-                                        </tr>
+                                       
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
