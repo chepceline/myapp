@@ -48,6 +48,7 @@
                                             <td>
                                                 <a href="{{ route ('admin.categories.show', $category->id)}}" class="btn btn-primary  mx-5">Show</a>
                                                 <a href="{{ route ('admin.categories.edit',$category->id)}}" class="btn btn-secondary">Edit</a>
+                                                
 
                                             </td>
                                         </tr>
