@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryRequest;
 use App\Models\BlogCategory;
 use Illuminate\Http\Request;
 
@@ -56,15 +57,20 @@ class BlogCategoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = BlogCategory::query()->find($id);
+
+        return view('admin.pages.blog_categories.edit',['category' => $category]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(CategoryRequest $request, string $id)
     {
-        //
+        $category = BlogCategory::query()->find($id);
+        $category->update($request->all());
+
+        return redirect()->route('admin.categories.list');
     }
 
     /**
