@@ -24,7 +24,20 @@
                             <h6 class="m-0 font-weight-bold text-primary">Update Categories</h6>
                         </div>
                         <div class="card-body">
-                            <p>Note: Updating Categories</p>
+                        <form action="{{ route('admin.categories.update', ['category' => $category->id])}}" method="put">
+                            @csrf
+                                
+                                <div class="mb-3">
+                                    <label class="form-label">Category Name:</label>
+                                    <input type="text" value="{{$category->name}}" class="form-control" name="name" placeholder="Enter category name">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Description</label>
+                                    <textarea class="form-control" name="description" placeholder="Enter description" rows="10">{{$category->description}}</textarea>
+                                </div>
+                                <button>Submit</button>
+
+                            </form>
                         </div>
                     </div>
 
