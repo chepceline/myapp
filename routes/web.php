@@ -47,6 +47,16 @@ Route::namespace('App\Http\Controllers\Admin')->prefix('admin')->as('admin.')->g
         'destroy' => 'categories.destroy'
 
     ]);
+    Route::resource('/post', 'PostController')->names([
+        'index' => 'posts.list',
+        'create' => 'posts.create',
+        'store' => 'posts.store',
+        'show' => 'posts.show',
+        'edit' => 'posts.edit',
+        'update' => 'posts.update',
+        'destroy' => 'posts.destroy',
+
+    ]);
 });
 
 
